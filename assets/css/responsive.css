@@ -1,0 +1,158 @@
+.grid {
+    padding: 0 16px;
+}
+
+.row {
+    display: flex;
+    flex-wrap: wrap;
+    margin-left: -8px;
+    margin-right: -8px;
+}
+
+.row.non-margin {
+    margin-left: 0;
+    margin-right: 0;
+}
+
+.col {
+    padding-left: 8px;
+    padding-right: 8px;
+}
+
+.col.non-padding {
+    padding-left: 0;
+    padding-right: 0;
+}
+
+.l-4 {
+    flex: 0 0 33.3333%;
+    max-width: 33.3333%;
+}
+
+.l-6 {
+    flex: 0 0 50%;
+    max-width: 50%;
+}
+
+.l-12 {
+    flex: 0 0 100%;
+    max-width: 100%;
+}
+
+@media (max-width: 1024px) {
+    .nav {
+        transform: translateX(-100%);
+        opacity: 0;
+    }
+
+    .main {
+        margin-left: 0;
+    }
+
+    .footer {
+        margin-left: 0;
+    }
+
+    
+    /* modal css */
+
+    .overlay {
+        position: fixed;
+        top: 0;
+        left: 0;
+        bottom: 0;
+        right: 0;
+        background: rgba(0, 0, 0, 0.5);
+        animation: showModal ease-in-out 0.3s;
+        cursor: pointer;
+        display: none;
+    }
+
+    .modal__label {
+        display: inline-block;
+        margin-bottom: 20px;
+        margin-top: 16px;
+    }
+
+    .modal__label > i {
+        font-size: 3.6rem;
+        cursor: pointer;
+        padding: 16px;
+    }
+
+    .modal__label > i:hover,
+    .modal__label-nav > i:hover {
+        background: #ccc;
+    }
+
+    .modal__label-nav > i {
+        display: inline;
+        font-size: 5rem;
+        float: right;
+        margin: 34px;
+        padding: 16px;
+        cursor: pointer;
+    }
+
+    .modal__input:checked ~ .nav {
+        transform: translateX(0);
+        opacity: 1;
+    }
+
+    .modal__input:checked ~ .overlay {
+        display: block;
+    }
+
+    @keyframes showModal {
+        0% {
+            opacity: 0;
+        }
+        100% {
+            opacity: 1;
+        }
+    }
+
+    .modal__avt {
+        display: inline-block;
+        width: 65px;
+        border-radius: 50%;
+        margin: 16px;
+        float: right;
+    }
+
+    .modal__avt::after {
+        content: "";
+        display: block;
+        clear: both;
+    }
+}
+
+@media (max-width: 740px) {
+    .m-6 {
+        flex: 0 0 50%;
+        max-width: 50%;
+    }
+}
+
+@media (max-width: 600px) {
+    .s-12 {
+        flex: 0 0 100%;
+        max-width: 100%;
+    }
+
+    .main__about-img-wrapper + .main__about-img-wrapper {
+        margin-top: -32px;
+    }
+
+    .main__about-fee-container {
+        margin-bottom: 30px;
+    }
+
+    .main__about-fee-wrapper + .main__about-fee-wrapper {
+        margin-top: -16px;
+    }
+
+    .main__contact-btn {
+        width: 100%;
+    }
+}
