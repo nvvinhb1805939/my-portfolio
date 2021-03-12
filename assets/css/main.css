@@ -8,6 +8,7 @@
     width: 300px;
     transition: all linear 0.3s;
     overflow: auto;
+    z-index: 1;
 }
 
 .nav__avt {
