@@ -351,6 +351,7 @@ a.nav__link--active {
 .main__contact-input-message-history {
     background: #fff;
     min-height: 45px;
+    width: 50%;
     border-radius: 5px;
     padding: 8px 0;
     position: absolute;
@@ -358,15 +359,6 @@ a.nav__link--active {
     left: 0;
     box-shadow: 0 0 1px var(--main-clr);
     display: none;
-}
-
-.main__contact-input-name-history {
-    width: 400px;
-}
-
-.main__contact-input-mail-history,
-.main__contact-input-message-history {
-    width: 200px;
 }
 
 .main__contact-input-name-history-item,

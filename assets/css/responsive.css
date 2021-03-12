@@ -155,4 +155,10 @@
     .main__contact-btn {
         width: 100%;
     }
+
+    .main__contact-input-name-history,
+    .main__contact-input-mail-history,
+    .main__contact-input-message-history {
+        width: 100%;
+    }
 }
